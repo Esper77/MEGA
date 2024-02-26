@@ -21,7 +21,8 @@ with open('products.csv', encoding='UTF-8') as file:
 
 with open('products_new.csv', encoding="UTF-8", mode="w") as file:
     writer = csv.writer(file, delimiter=";")
-    for row in calc_total(data):
-        print(row)
+    new_data = calc_total(data)
+    for row in new_data:
         writer.writerow(row)
 
+print(sum(row[5] for row in new_data if row[0] == "Закуски"))
