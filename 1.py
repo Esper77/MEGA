@@ -19,7 +19,7 @@ with open('products.csv', encoding='UTF-8') as file:
     data = [row for row in csv.reader(file, delimiter=";")]
 
 
-with open('products_new.csv', encoding="UTF-8", mode="w") as file:
+with open('products_new.csv', encoding="UTF-8", mode="w") as file:  # Формирование и (пере-)запись выходного файла
     writer = csv.writer(file, delimiter=";")
     new_data = calc_total(data)
     for row in new_data:

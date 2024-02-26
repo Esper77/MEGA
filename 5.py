@@ -8,5 +8,5 @@ for row in data[1:]:
         hash_table[row[1]] = int(row[4][:-2])
     else:
         hash_table[row[1]] += int(row[4][:-2])
-for item in hash_table.items():
+for item in hash_table.items():  # Вывод полученной таблицы
     print(f"{item[0]}, {item[1]}")
