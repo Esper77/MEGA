@@ -17,7 +17,7 @@ query = ""
 
 while query != "молоко":
     query = input()
-    if query in hash_table.keys:
+    if query in hash_table.keys():
         vals = list(hash_table[query].items())
         vals.sort(key=lambda a: a[1])
 
